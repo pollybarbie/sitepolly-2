@@ -1,71 +1,89 @@
-/* Estilo para o layout */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Estilo geral */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background-color: #f0f2f5;
     color: #333;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
 }
 
+/* Estilo do cabeçalho */
 header {
+    background-color: #4a90e2;
+    color: white;
+    width: 100%;
     text-align: center;
-    margin-bottom: 30px;
-}
-
-h1 {
-    color: #0044cc;
-}
-
-main {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-section {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 2rem 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header h2 {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+/* Estilo da seção principal (lista) */
+.top-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Estilo de cada card */
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border-left: 5px solid #4a90e2;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.rank {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #d0d0d0;
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
     color: #333;
 }
 
-label {
-    font-size: 1rem;
-    margin-right: 10px;
+.card p {
+    margin: 5px 0 0;
+    color: #666;
 }
 
-input {
-    padding: 10px;
-    font-size: 1rem;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    padding: 10px 15px;
-    font-size: 1rem;
-    background-color: #0044cc;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0033aa;
-}
-
-#passwordOutput {
-    margin-top: 20px;
-    font-size: 1.2rem;
-    color: #2e8b57;
+/* Estilo do rodapé */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #4a90e2;
+    color: white;
+    margin-top: auto;
 }
